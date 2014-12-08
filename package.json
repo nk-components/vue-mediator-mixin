@@ -1,0 +1,26 @@
+{
+  "name": "vue-mediator-mixin",
+  "version": "0.0.0",
+  "description": "Vue.js wrapper for nk-mediator",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "vue",
+    "browser",
+    "mediator"
+  ],
+  "license": "MIT",
+  "author": "Antoine Lehurt <code@kewah.com> (http://kewah.com/)",
+  "homepage": "https://github.com/nk-components/vue-mediator-mixin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nk-components/vue-mediator-mixin"
+  },
+  "bugs": {
+    "url": "https://github.com/nk-components/vue-mediator-mixin/issues"
+  },
+  "dependencies": {
+    "nk-mediator": "^1.1.0"
+  }
+}
