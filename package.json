@@ -1,10 +1,9 @@
 {
   "name": "vue-mediator-mixin",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Vue.js wrapper for nk-mediator",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "vue",
     "browser",
