@@ -20,6 +20,8 @@
     "url": "https://github.com/nk-components/vue-mediator-mixin/issues"
   },
   "dependencies": {
-    "nk-mediator": "^1.1.0"
+    "component-bind": "^1.0.0",
+    "nk-mediator": "^1.1.0",
+    "vue": "^0.11.4"
   }
 }

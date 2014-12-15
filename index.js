@@ -2,10 +2,43 @@
 
 var slice = Array.prototype.slice;
 var mediator = require('nk-mediator');
+var _ = require('vue').util;
+var bind = require('component-bind');
 
 module.exports = {
   created: function() {
     this._pubsubList = Object.create(null);
+
+    var events = this.$options.mediator;
+    var methods = this.$options.methods;
+
+    if (events) {
+      Object.keys(events).forEach(function(event) {
+        var callback = events[event];
+        var type = typeof callback;
+
+        if (type === 'function') {
+          this.sub(event, bind(callback, this));
+          return;
+        }
+
+        if (type === 'string') {
+          var method = methods && methods[callback];
+
+          if (method) {
+            this.sub(event, bind(method, this));
+            return;
+          }
+
+          _.warn(
+            'Unknown method: "' + callback + '" when '
+            + 'registering callback for mediator'
+            + ': "' + event + '".'
+          );
+          return;
+        }
+      }, this);
+    }
   },
 
   beforeDestroy: function() {
