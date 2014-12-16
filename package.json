@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Vue.js wrapper for nk-mediator",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npm run build && mocha-phantomjs ./test/runner.html",
+    "build": "browserify -d -r assert -r vue -r nk-mediator -r ./index.js:vue-mediator-mixin > bundle.js",
+    "watch": "onchange 'index.js' 'test/index.js' -- npm test"
+  },
   "keywords": [
     "vue",
     "browser",
@@ -23,5 +27,11 @@
     "component-bind": "^1.0.0",
     "nk-mediator": "^1.1.0",
     "vue": "^0.11.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "mocha-phantomjs": "^3.5.2",
+    "onchange": "0.0.2",
+    "phantomjs": "^1.9.12"
   }
 }
