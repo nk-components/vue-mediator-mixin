@@ -8,7 +8,7 @@
 With [npm](http://npmjs.org) do:
 
 ```bash
-$ npm install vue-mediator-mixin --save-dev
+$ npm install vue-mediator-mixin --save
 ```
 
 ## Usage
