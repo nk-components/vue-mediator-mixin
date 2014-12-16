@@ -18,7 +18,7 @@ module.exports = {
         var type = typeof callback;
 
         if (type === 'function') {
-          this.sub(event, bind(callback, this));
+          this.sub(event, bind(this, callback));
           return;
         }
 
@@ -26,7 +26,7 @@ module.exports = {
           var method = methods && methods[callback];
 
           if (method) {
-            this.sub(event, bind(method, this));
+            this.sub(event, bind(this, method));
             return;
           }
 
