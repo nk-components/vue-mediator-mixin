@@ -1,4 +1,4 @@
-# vue-mediator-mixin
+# vue-mediator-mixin [![Build Status](https://travis-ci.org/nk-components/vue-mediator-mixin.svg?branch=master)](https://travis-ci.org/nk-components/vue-mediator-mixin)
 
 [Vue.js](https://github.com/yyx990803/vue/) wrapper for 
 [nk-mediator](https://github.com/nk-components/mediator).
